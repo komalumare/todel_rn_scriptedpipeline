@@ -28,9 +28,7 @@ pipeline {
         }
         stage("Email"){
             steps{
-                mail bcc: '', body: '''test
-
-..''', cc: '', from: '', replyTo: '', subject: 'simple test', to: 'te415606@gmail.com'
+                mail body: "${env.JOB_NAME} -Build#${env.BUILD_NUMBER} -${currentBuild.currentResult}\n\nCheck console output at ${env.BUILD_URL} to view the results.",subject:"${env.JOB_NAME} -Build#${env.BUILD_NUMBER} -${currentBuild.currentResult}",to:'te415606@gmail.com'
             }
         }
     }
