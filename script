@@ -1,14 +1,26 @@
 pipeline{
     agent any
     stages{
+stage(clean){
+        steps{
+          echo "clean"
+          }
+        }
       stage(build){
+        steps{
           echo "build"
-      }
+          }
+        }
       stage(test){
+        steps{
           echo "test"
-       }
-      stage(deploy){
-          echo "deploy"
-      }
-    }
+          }
+        }
+    stage(package){
+        steps{
+          echo "package"
+          }
+        }
+
+}
 }
