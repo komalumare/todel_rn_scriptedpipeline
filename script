@@ -1,26 +1,23 @@
-pipeline{
+pipeline {
     agent any
     stages{
-stage(clean){
-        steps{
-          echo "clean"
-          }
+        stage("Cleaning stage"){
+            steps{
+                echo "In Stage Clean"
+                bat "mvn clean"
+            }
         }
-      stage(build){
-        steps{
-          echo "build"
-          }
+        stage("Testing stage"){
+            steps{
+                echo "In Stage Test"
+                bat "mvn test"
+            }
         }
-      stage(test){
-        steps{
-          echo "test"
-          }
+        stage("Packaging stage"){
+            steps{
+                echo "In Stage Package"
+                bat "mvn package"
+            }
         }
-    stage(package){
-        steps{
-          echo "package"
-          }
-        }
-
-}
+    }
 }
