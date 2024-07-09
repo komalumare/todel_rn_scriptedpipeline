@@ -26,6 +26,10 @@ pipeline {
                 archive 'target/*.jar'
             }
         }
+        stage("Email"){
+            mail bcc: '', body: '''test
 
+..''', cc: '', from: '', replyTo: '', subject: 'simple test', to: 'te415606@gmail.com'
+        }
     }
 }
