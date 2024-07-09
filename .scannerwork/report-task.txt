@@ -1,0 +1,6 @@
+projectKey=simpleIntegrationJenkins
+serverUrl=http://localhost:9000
+serverVersion=10.5.1.90531
+dashboardUrl=http://localhost:9000/dashboard?id=simpleIntegrationJenkins
+ceTaskId=d346e831-92c8-4a08-a658-72510b93dbb2
+ceTaskUrl=http://localhost:9000/api/ce/task?id=d346e831-92c8-4a08-a658-72510b93dbb2

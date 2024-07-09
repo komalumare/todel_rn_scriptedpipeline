@@ -1,0 +1,6 @@
+projectKey=com.komal.calci:simpleIntegrationJenkins
+serverUrl=http://localhost:9000
+serverVersion=10.5.1.90531
+dashboardUrl=http://localhost:9000/dashboard?id=com.komal.calci%3AsimpleIntegrationJenkins
+ceTaskId=cca7fde1-dfec-4845-992e-7a886bd274e2
+ceTaskUrl=http://localhost:9000/api/ce/task?id=cca7fde1-dfec-4845-992e-7a886bd274e2
