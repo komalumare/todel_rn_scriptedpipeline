@@ -1,22 +1,19 @@
 pipeline {
     agent any
     stages{
-        stage("Cleaning stage"){
+        stage("Parallel"){
             steps{
-                echo "In Stage Clean"
-                bat "mvn clean"
-            }
-        }
-        stage("Testing stage"){
-            steps{
-                echo "In Stage Test"
-                bat "mvn test"
-            }
-        }
-        stage("Packaging stage"){
-            steps{
-                echo "In Stage Package"
-                bat "mvn package"
+                parallel{
+                    a:{
+                        bat "mvn clean"
+                    }
+                    b:{
+                        bat "mvn test"
+                    }
+                    c:{
+                        bat "mvn deploy"
+                    }
+                }
             }
         }
         stage("Consolidate Results"){
